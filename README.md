@@ -1,4 +1,8 @@
 #                      NFTMARKETPLACE
+## Réalisé par :
+<a href="https://github.com/Nafia-AKDI">AKDI Nafia </a>       
+<a href="https://github.com/ELKRISSIAchraf">EL KRISSI Achraf</a>
+### 
 ## Objectif : 
 le développement min d’un Marketplace des NFTs « web based
 DApp », les transactions au niveau du Marketplace se fait a travers crypto monnaie Ethereum.
