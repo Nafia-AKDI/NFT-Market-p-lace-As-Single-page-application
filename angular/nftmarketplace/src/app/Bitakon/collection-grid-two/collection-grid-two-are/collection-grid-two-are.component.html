@@ -1,0 +1,52 @@
+
+
+
+<section class="collection__grid pt-120 pb-120">
+   <div class="container">
+      <div class="row">
+ 
+       <div *ngFor="let collection of collections" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+         <div class="collection__box p-relative fix mb-30">
+            <div class="collection__box-bg" [ngStyle]="{background:'url(' + retrievedNftImages[collection.name] + ')',backgroundRepeat:'no-repeat',backgroundSize:'cover',backgroundPosition:'center'}"></div>
+            <div class="collection__box-top d-flex justify-content-between">
+               <div class="collection__box-tag">
+                  <a [routerLink]="['/collection']">{{collection.categoryName}}</a>
+               </div>
+               <div class="collection__box-thumb">
+                  <img src="{{retrievedNftImages[collection.name]}}" alt="">
+               </div>
+            </div>
+            <div class="collection__box-bottom">
+               <div class="collection__box-info">
+                  <h3 class="collection__box-title">
+                     <a [routerLink]="['/product-filter',collection.name]" [innerHtml]="collection.name"></a>
+                  </h3>
+                  <p>{{collection.items}} NFT</p>
+               </div>
+               <div class="collection__box-user d-inline-block">
+                  <div class="collection__box-user-inner d-flex align-items-center">
+                     <div class="collection__box-user-thumb mr-10">
+                        <a href="#">
+                           <img src="{{retrievedNftImages[collection.username]}}" alt="">
+                        </a>
+                     </div>
+                     <div class="collection__box-user-content">
+                        <h5>
+                           <a [routerLink]="['/collection']">{{collection.username}}</a>
+                        </h5>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+ 
+         <div class="col-xxl-12">
+            <div class="nft__more text-center mt-20">
+               <a [routerLink]="['/collection']" class="tp-load-more"><i class="fa-light fa-arrow-rotate-right"></i>View all items</a>
+            </div>
+         </div>
+      </div>
+   </div>
+ </section>
+ 
